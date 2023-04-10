@@ -1,0 +1,8 @@
+hello
+Hello there!
+
+how are you?
+I'm doing fine, thanks for asking.
+
+what is your name?
+My name is Bot, pleased to meet you!
