@@ -7,7 +7,7 @@ WORKDIR /app
 # Copy the bot.py file from the current directory to the working directory in the container
 COPY bot.py .
 COPY bottoken.private .
-COPY act.txt .
+COPY *.txt .
 
 # Install any required packages
 RUN pip install telebot
