@@ -27,14 +27,14 @@ for option in menu_options:
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    bot.reply_to(message, 'Hello! How can I assist you?', reply_markup=start_menu)
+    bot.reply_to(message, 'Добрый день, я чат-бот по Нижнему Новгороду. Чем я могу вам помочь?', reply_markup=start_menu)
 
 @bot.message_handler(func=lambda message: True)
 def reply(message):
     user_phrase = message.text.lower()
-    bot_answer = answers.get(user_phrase, 'I do not understand you.')
+    bot_answer = answers.get(user_phrase, 'Простите, не смог обработать ваш текущий запрос.')
     if user_phrase == menu_options[-1].lower():
-        bot_answer = 'Welcome back to the menu!'
+        bot_answer = 'Чем я могу вам помочь? Выберите опцию.'
         bot.send_message(message.chat.id, bot_answer, reply_markup=start_menu)
     else:
         bot.reply_to(message, bot_answer, reply_markup=start_menu)
