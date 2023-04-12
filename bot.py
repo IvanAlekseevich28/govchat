@@ -27,7 +27,7 @@ for option in menu_options:
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    bot.reply_to(message, 'Добрый день, я чат-бот по Нижнему Новгороду. Чем я могу вам помочь?', reply_markup=start_menu)
+    bot.reply_to(message, 'Добрый день! Вас приветствует помощник «ГосЧат». Моя цель помочь решить проблемы жителей.', reply_markup=start_menu)
 
 @bot.message_handler(func=lambda message: True)
 def reply(message):
